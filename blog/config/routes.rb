@@ -1,6 +1,8 @@
 Blog::Application.routes.draw do
 
 
+  get "stats/display"
+
   devise_for :users
 
   get "logins/login"
