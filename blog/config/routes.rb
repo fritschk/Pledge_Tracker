@@ -3,6 +3,8 @@ Blog::Application.routes.draw do
 
 
 
+  get "profile/display"
+
   get "users/index"
 
 
