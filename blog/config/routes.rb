@@ -1,30 +1,4 @@
-<<<<<<< HEAD
-Blog::Application.routes.draw do
 
-
-  get "users/index"
-
-  get "stats/display"
-
-  devise_for :users
-  
-  resources :users
-
-  get "logins/login"
-
-  get "greetings/hello"
-
-  
-  
-  resources :posts do
-	resources :comments
-  end
-
-  get "home/index"
-
-   root :to => 'home#index'
-end
-=======
 Blog::Application.routes.draw do
 
 
@@ -52,4 +26,3 @@ Blog::Application.routes.draw do
 
    root to: 'home#index'
 end
->>>>>>> added bootstrap
