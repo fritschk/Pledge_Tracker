@@ -1,6 +1,8 @@
 class Post < ActiveRecord::Base
   attr_accessible :activity, :activity_unit, :event, :name, :password, :username
   
+  belongs_to :user
+  
   validates :username,  :presence => true
   validates :password,  :presence => true
   validates :name,  :presence => true

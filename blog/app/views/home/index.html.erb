@@ -1,7 +1,7 @@
 <h1>Pledge Tracker</h1>
 
-<%= link_to('Login', new_user_session_path)  %>  
+<%= link_to('Login', new_user_session_path) if current_user.nil? %>  
 </br>
- <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>   
+ <%= link_to('Logout', destroy_user_session_path, :method => :delete) unless current_user.nil? %>   
  </br>
-<%= link_to "Sponser", greetings_hello_path %>
+<%= link_to "Sponser", users_path %>
