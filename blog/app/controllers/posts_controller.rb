@@ -25,8 +25,8 @@ class PostsController < ApplicationController
   # GET /posts/new.json
   def new
     @post = Post.new
-	user = User.where(email: params[:email]).first
-	@post.username = user.email
+	#user = User.where(email: params[:email]).first
+	#@post.username = user.email
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @post }
