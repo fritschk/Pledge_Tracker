@@ -1,0 +1,33 @@
+<h1>Listing posts</h1>
+
+<table>
+  <tr>
+    <th>Username</th>
+    <th>Password</th>
+    <th>Name</th>
+    <th>Event</th>
+    <th>Activity</th>
+    <th>Activity unit</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @posts.each do |post| %>
+  <tr>
+    <td><%= post.username %></td>
+    <td><%= post.password %></td>
+    <td><%= post.name %></td>
+    <td><%= post.event %></td>
+    <td><%= post.activity %></td>
+    <td><%= post.activity_unit %></td>
+    <td><%= link_to 'Show', post %></td>
+    <td><%= link_to 'Edit', edit_post_path(post) %></td>
+    <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Post', new_post_path %>
