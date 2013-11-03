@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <h1>Search for a fundraiser</h1>
 
 <%= form_tag users_path, method: :get do %>
@@ -12,3 +13,19 @@
     <%= submit_tag 'Find Users' %>
   </div>
 <% end %>
+=======
+<h1>Search for a fundraiser</h1>
+
+<%= form_tag users_path, method: :get do %>
+
+  <div class="field">
+    <%= label_tag :email %><br />
+	<%= text_field_tag :email, '' %><br />
+
+  </div>
+  
+  <div class="actions">
+    <%= submit_tag 'Find Users' %>
+  </div>
+<% end %>
+>>>>>>> added bootstrap
